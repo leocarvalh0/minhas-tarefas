@@ -1,13 +1,9 @@
-import BarraLateral from '../../containers/BarraLateral'
-import Formulario from '../../containers/Formulario'
+import Formulario from '../../components/Formulario'
 
-const Cadastro = () => {
-  return (
-    <>
-      <BarraLateral mostrarFiltros={false} />
-      <Formulario />
-    </>
-  )
-}
+const Cadastro = () => (
+  <>
+    <Formulario />
+  </>
+)
 
 export default Cadastro

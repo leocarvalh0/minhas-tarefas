@@ -1,58 +1,52 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import { Botao } from '../components/Contato/styles'
 import variaveis from './variaveis'
 
 const EstiloGlobal = createGlobalStyle`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto, sans-serif;
-    list-style: none;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, sans-serif;
+        list-style: none;
+    }
+
+    input {
+      max-width: 800px;
+      width: 100%;
+    margin-bottom: 8px;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.2s ease;
+
+    &:focus {
+      border-color: ${variaveis.azul};
+    }
+
+    &:disabled {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      color: #333;
+      cursor: default;
+    }
   }
+ `
+
+export const TituloHeader = styled.h1`
+  margin: 100px 0;
 `
+
 export const Container = styled.div`
-  display: grid;
-  grid-template-columns: 224px auto;
-`
-
-export const MainContainer = styled.main`
-  padding: 0 40px;
-  height: 100vh;
-  overflow-y: scroll;
-`
-
-export const Titulo = styled.h2`
-  display: block;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 18px;
-  font-weight: bold;
-`
-
-export const Campo = styled.input`
-  padding: 8px;
-  background-color: #fff;
-  border-radius: 8px;
-  font-weight: bold;
-  color: #666666;
-  border-color: #666666;
-  width: 100%;
-`
-
-export const Botao = styled.button`
-  font-weight: bold;
-  font-size: 12px;
-  color: #fff;
-  padding: 8px 12px;
-  border: none;
-  cursor: pointer;
-  background-color: ${variaveis.azulEscuro};
-  border-radius: 8px;
-  margin-right: 8px;
+  max-width: 50%;
+  margin: 0 auto;
 `
 
 export const BotaoSalvar = styled(Botao)`
   background-color: ${variaveis.verde};
+  width: 80px;
 `
 
 export default EstiloGlobal

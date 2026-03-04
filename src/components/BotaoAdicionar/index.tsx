@@ -1,7 +1,5 @@
-import { Circulo } from './styles'
+import { Botao } from './styles'
 
-const BotaoAdicionar = () => {
-  return <Circulo to="/novo">+</Circulo>
-}
+const BotaoAdicionar = () => <Botao to="/novo">+</Botao>
 
 export default BotaoAdicionar
